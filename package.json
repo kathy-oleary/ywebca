@@ -1,0 +1,16 @@
+{
+  "name": "ywca-workspace",
+  "version": "0.0.1",
+  "description": "YWCA Workspace for Kathy O'Leary",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kathy-oleary/ywebca.git"
+  },
+  "author": {
+    "name": "Kathy O'Leary",
+    "email": "4kathy.oleary@gmail.com",
+    "url": "https://github.com/kathy-oleary"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
