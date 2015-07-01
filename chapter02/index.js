@@ -127,8 +127,8 @@ Exer.environment1 = function () {
 
   // return window;
   // return document;
-  // return history;
-  // return browser;
+  //  return history;
+    return browser;
   // return navigator;
 
 };
@@ -142,6 +142,9 @@ Exer.environment1 = function () {
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
   // Your work here
+  recombobulate();
+  setPowerLevel(10000);
+  cornTortilla("chicken", "queso", "bacon", "lime");
 
 };
 
@@ -152,6 +155,7 @@ Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 Exer.console1 = function () {
 
   // Output something to the console.
+  console.log("Wheeee");
 
 };
 
@@ -159,6 +163,7 @@ Exer.console1 = function () {
 Exer.console2 = function ( printme ) {
 
   // Print the parameter `printme` to the console.
+  console.log(printme);
 
 };
 
@@ -170,6 +175,8 @@ Exer.console2 = function ( printme ) {
 Exer.console3 = function ( data ) {
 
   // your answer here
+  var xxxxx=data;
+  console.log('The magic word is "' + xxxxx + '"');
 
 };
 
@@ -178,7 +185,7 @@ Exer.console4 = function () {
 
   // Use comma-separated values to output two things to the console with one
   // call.
-
+  console.log(2,4);
 };
 
 // Console 5
@@ -186,7 +193,8 @@ Exer.console4 = function () {
 Exer.console5 = function ( x, y ) {
 
   // Output the first parameter `x` to the console.
-
+  console.log(x);
+  return y+1;
   // Make the function return the parameter `y` plus 1.
 
 };
@@ -199,6 +207,9 @@ Exer.return1 = function () {
 
   // your work goes here
 
+console.log(magicFunc());
+
+
 };
 
 // Return 2
@@ -206,6 +217,7 @@ Exer.return1 = function () {
 Exer.return2 = function () {
 
   // your work goes here
+return magicFunc();
 
 };
 
@@ -213,7 +225,9 @@ Exer.return2 = function () {
 Exer.return3 = function () {
 
   // Call `strShift` with the argument "abczABCZ". Log the result.
-
+  var beep = strShift("abczABCZ");
+  console.log(beep);
+  return beep + "123";
   // Return that same result with "123" concatenated to the end.
 
 };
@@ -222,6 +236,8 @@ Exer.return3 = function () {
 // Log the result of the string concatenation of two separate calls to
 // `magicFunc`.
 Exer.return4 = function () {
+  
+  console.log(magicFunc()+ "" + magicFunc());
 
   // your work goes here
 
@@ -236,7 +252,9 @@ Exer.return4 = function () {
 Exer.return5 = function () {
 
   // Declare and initialize a variable for the first string.
-
+  var rock=strShift("abcABC123!@#");
+  var roll=strShift(strShift("a S d F j K l"));
+  return strShuffle(rock,roll);
   // Declare and initialize a variable for the second string.
 
   // A return statement.
@@ -249,6 +267,8 @@ Exer.return5 = function () {
 // Call prompt with the string and return the result.
 Exer.prompt1 = function () {
 
+  var crud = prompt("What is the answer to the meaning of life, the universe, and everything?","42");
+  return crud;
   // Your work here
 
 };
@@ -257,6 +277,8 @@ Exer.prompt1 = function () {
 // Call confirm with the string and return the result.
 Exer.confirm1 = function () {
 
+  var geez=confirm("Imma let you finish, but Javascript is one of the best programming languages of all time...one of the best programming languages of all time!");
+  return geez;
   // Your work here
 
 };
@@ -267,7 +289,8 @@ Exer.confirm1 = function () {
 Exer.control1 = function () {
 
   // Use prompt to get a number from a user
-
+  var lotto = prompt("Pick a number:","");
+  console.log(lotto);
   // Print that number to the console
 
 };
@@ -276,18 +299,19 @@ Exer.control1 = function () {
 Exer.control2 = function ( bar ) {
 
   // Declare a variable named `foo`.
-
+  var foo;
   // Initialize `foo` with a string.
-
+  foo="Hello";
   // Log `foo` to the console.
-
+  console.log(foo);
   // Concatenate the parameter `bar` to be beginning and end of `foo`
   // Save the result in a new variable called `ding`.
-
+  var ding=bar + foo + bar;
   // Call `strReverse` and pass it `ding` (as an argument).
   // Send the result to the user in a confirm window.
   // Save the user's response in a new variable called `quux`.
-
+  var quux =confirm(strReverse(ding));
+  return !quux;
   // Return the opposite of `quux`.
 
 };
