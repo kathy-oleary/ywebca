@@ -1,4 +1,4 @@
-/*---------------------    EXPRESSIONS AND STATEMENTS    ---------------------*/
+ /*---------------------    EXPRESSIONS AND STATEMENTS    ---------------------*/
 
 // Expressions 1
 // Make the function return a nested expression (use parentheses) whose
@@ -179,7 +179,7 @@ Exer.console3 = function ( data ) {
   console.log('The magic word is "' + xxxxx + '"');
 
 };
-
+i
 // Console 4
 Exer.console4 = function () {
 
@@ -323,7 +323,9 @@ Exer.control2 = function ( bar ) {
 Exer.condition1 = function ( isSerious ) {
 
   console.log( "Welcome to Camelot!" );
-
+  if (isSerious==false) {
+    console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
+  }
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
 
@@ -336,7 +338,13 @@ Exer.condition2 = function ( temperature ) {
   // If temperature is greater than or equal to 70
   // Then output:
   //     Hermit crab warning!
+  if(temperature>=70) {
+    console.log("Hermit crab warning!");
 
+  }else if(temperature<70) {
+    console.log("Catch of the day: influenza, $14/lb.");
+  }
+  console.log("Thanks for visiting Pier One and Three Quarters!");
   // Otherwise, output
   //     Catch of the day: influenza, $14/lb.
 
@@ -350,7 +358,20 @@ Exer.condition2 = function ( temperature ) {
 Exer.condition3 = function ( whatDay ) {
 
   // Declare and initialize `luckyNumber`
-
+  var luckyNumber=7;
+  if(whatDay.length<=6) {
+    luckyNumber+="!";
+  }
+  if(whatDay=="Mannersday") {
+    luckyNumber+=4;
+  }else if(whatDay=="Foosday") {
+    luckyNumber+=2;
+  }else if(whatDay=="Heyday") {
+    luckyNumber+=luckyNumber.charAt(0);
+  }else {
+    luckyNumber=Infinity; 
+  }
+  return luckyNumber;
   // If the length of `whatDay` is 6 or less...
 
   // If `whatDay` is "Mannersday"...
@@ -366,7 +387,18 @@ Exer.condition3 = function ( whatDay ) {
 Exer.condition4 = function () {
 
   // Prompt the user
-
+  var thingy=prompt("Enter today's date, please.");
+  if(typeof thingy!="number" || isNaN(thingy)) {
+    console.log("What do you think this is, bub? Wonderland?");
+  }else if(thingy<1) {
+    console.log("Negativelaaaaaaand~!");
+  }else if(thingy>31) {
+    console.log("Are they paying you overtime for this?");
+  }else if(thingy>=29 && thingy<=31) {
+    console.log("I sure hope it isn't February.");
+  }else {
+    console.log("Did you know? There are exactly " + thingy + " ways to make today awesome!");
+  }
   // If the user's input is not a number...
   // Otherwise...
     // If the user's input is less than 1...
@@ -381,28 +413,30 @@ Exer.condition4 = function () {
 // While 1
 // Turn the code in the function into a while loop.
 Exer.while1 = function () {
-  console.log("10 sheep");
-  console.log("9 sheep");
-  console.log("8 sheep");
-  console.log("7 sheep");
-  console.log("6 sheep");
-  console.log("5 sheep");
-  console.log("4 sheep");
-  console.log("3 sheep");
-  console.log("2 sheep");
-  console.log("1 sheep");
+
+  var numbers = 10;
+  while (numbers>=1) {
+    console.log(numbers + " sheep");
+    numbers = numbers - 1;
+  }
+
 };
 
 /* jshint ignore:start */
 // While 2
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
-  var deadWitch = "I'm melting!";
-  while(deadWitch.length > 0) {
-    console.log(deadWitch);
-    deadWitch = deadWitch.substr(2);
-  }
+
+  
+  console.log("I'm melting!");
+  console.log("m melting!");
+  console.log("melting!");
+  console.log("lting!");
+  console.log("ing!");
+  console.log("g!");
   console.log("What a world!");
+
+
 };
 /* jshint ignore:end */
 
@@ -410,23 +444,32 @@ Exer.while2 = function () {
 // Turn the code in the function into a single do while loop.
 // Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
 Exer.doWhile1 = function () {
-  console.log(0);
-  console.log(1);
-  console.log(2);
-  console.log(0);
-  console.log(1);
-  console.log(2);
+ 
+  var dome=0;
+  do {
+    var remainder= dome % 3;
+    ++dome;
+    console.log(remainder);
+  }while (dome<6);
+
 };
 
 /* jshint ignore:start */
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
-  var trainNum = 1;
-  do {
-    console.log("Train# " + trainNum + ": In flight!?");
-  } while (trainNum++ < 7);
+  
+
+  console.log("Train# 1: In flight!?");
+  console.log("Train# 2: In flight!?");
+  console.log("Train# 3: In flight!?");
+  console.log("Train# 4: In flight!?");
+  console.log("Train# 5: In flight!?");
+  console.log("Train# 6: In flight!?");
+  console.log("Train# 7: In flight!?");
 };
+
+
 /* jshint ignore:end */
 
 /*---------------------------    INDENTING CODE    ---------------------------*/
@@ -434,13 +477,21 @@ Exer.doWhile2 = function () {
 // Indenting 1
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
-var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
+  var firstName = "Zachery"; 
+  var lastName = "Moneypenny"; 
+  if(firstName === "Zachery") { 
+    lastName = "Johnson";  
+  }
 };
 
 // Indenting 2
 // Correctly indent the following code block using FOUR spaces for each block
 Exer.indenting2 = function() {
-var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
+    var firstName = "Penny"; 
+    var lastName = "Moneywhistle"; 
+    if(firstName === "Penny") { 
+        lastName = "Johnson"; 
+    }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
@@ -448,14 +499,17 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 // For 1
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
+ 
+ 
 
-  var scream;
-  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
-    console.log( scream );
-    scream = "    " + scream;
-  }
-  scream += "H!"
-  console.log( scream );
+console.log("...");
+console.log("    ...AA");
+console.log("        ...AAAA");
+console.log("            ...AAAAAA");
+console.log("                ...AAAAAAAA");
+console.log("                    ...AAAAAAAAAAH!");
+
+
 
 };
 
@@ -464,16 +518,17 @@ Exer.for1 = function () {
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
 
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
+
+
+  for (var counter2=0; counter2<2; ++counter2) {
+    console.log("Hi!");
+    var slim="My name is";
+    for (var counter=0; counter<3; ++counter) {
+      console.log(slim);
+    }
+      console.log("Slim Shady");
+  }
+
 
 };
 /* jshint ignore:end */
@@ -485,6 +540,15 @@ Exer.for3 = function () {
 
   // Your work here
 
+
+for (var countz=20; countz>=5; --countz) {
+    if (countz%2==0) {
+      console.log(countz, "even");
+    }else {
+      console.log(countz, "odd");
+    }
+}
+
 };
 
 /*-----------------------    BREAKING OUT OF A LOOP    -----------------------*/
@@ -494,7 +558,7 @@ Exer.for3 = function () {
 Exer.breaking1 = function(yeng) {
 
   while(yeng()) {
-
+    break;
   }
 
 };
@@ -527,6 +591,12 @@ Exer.succinct1 = function ( kiwis ) {
   // Concatenate " handsomely hirsute kiwis" to kiwis.
 
   // Return kiwis.
+kiwis *=4;
+kiwis -=2;
+kiwis /=2;
+kiwis+=" handsomely hirsute kiwis";
+return kiwis;
+
 
 };
 
@@ -534,7 +604,7 @@ Exer.succinct1 = function ( kiwis ) {
 // Edit the for loop to use the incrementation operator.
 Exer.succinct2 = function () {
 
-  for ( var hippo = 2; hippo <= 10; hippo += 1 ) {
+  for ( var hippo = 2; hippo <= 10; hippo++ ) {
     console.log( hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" );
   }
 
@@ -547,7 +617,7 @@ Exer.succinct3 = function () {
   var message = "Reverse me!";
   var pointer = message.length;
   while( pointer > 0 ) {
-    console.log( message.charAt( pointer-- ) );
+    console.log( message.charAt( --pointer ) );
   }
 
 };
@@ -562,17 +632,27 @@ Exer.switch1 = function ( animal ) {
   // Create a switch that dispatches on the parameter `animal`.
   // In each case, concatenate the correct response to end of the `output`
   // string.
-
     // "cow": "foo"
-
     // "sheep": "bar"
-
     // "duck": "quux"
-
     // default: "ring-a-ding-ding-dingding-ding-a-ding-ding"
-
+  
+  switch (animal) {
+    case "cow":
+      output+="foo";
+      break;
+    case "sheep":
+      output+="bar";
+      break;
+    case "duck":
+      output+="quux";
+      break;
+    default:
+      output+="ring-a-ding-ding-dingding-ding-a-ding-ding";
+    
+  }
   output += '"!';
-  console.log( output );
+  console.log(output);
 
 };
 
@@ -581,11 +661,11 @@ Exer.switch1 = function ( animal ) {
 /* jshint ignore:start */
 Exer.capitalization1 = function() {
 
-  var ZeRo = 0;
-  var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
-  for (var Index = 0; I < HAPPYCAT.Length; Index++) {
-    if (Index % 4 == ZeRo) {
-      Console.Log(HAPPYCAT);
+  var zero = 0;
+  var happyCat = new String("How did this get here! I'm not good at computer!");
+  for (var index = 0; I < happyCat.length; index++) {
+    if (index % 4 == zero) {
+      console.log(happyCat);
     }
   }
 
@@ -598,17 +678,18 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
   if ( war ) {
     if ( missiles ) {
-      missiles.launch();
+      // missiles.launch();
     } else {
       cower();
     }
+    // I like wheat bread for my sandwiches when coding!
   } else {
     if ( wood ) {
       wood.trade( sheep, 1 );
     } else if ( sheep ) {
       sheep.trade( wood, 3 );
     } else {
-      brick.buy(2);
+      brick.buy(2); // Zorro lives! and so does his bandits!
     }
   }
 
@@ -616,6 +697,14 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
 Exer.comments2 = function () {
 
-  // your work here
+ 
+
+/*           *        ****     *            *                
+  *    *    *        *    *     *     *    *      
+   *  *  * *         *    *      *  *   * *         
+    *     *           ****         *     * 
+
+    */    
+
 
 };
