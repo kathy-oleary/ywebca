@@ -8,244 +8,17 @@ Parameters and Scopes exercises *******
 
 Nested Scope exercises ******************
 
-Functions as Values exercises XX
-  Values 1 X***
-    given spaceCubeDetector and volume should assign spaceCubeDetector to volume 
-      Expected:
-/volume\s+=\s+spaceCubeDetector/m
-      Actual:
-function ( volume, spaceCubeDetector ) {  //
-//=======================================================//
-volume=spaceCubeDetector;
-volume(7, 3, 2);
-return volume;
+Functions as Values exercises **
 
-}
+Declaration Notation exercises **
 
-  Values 2 XXX
-    given volume should assign a new function to volume 
-      Expected:
-/volume\s+=\s+function/m
-      Actual:
-function ( volume ) {  //
-//====================================//
+The Call Stack exercises **
 
+Optional Arguments exercises **
 
+Closure exercises **
 
-}
-
-    given volume should return the new volume 
-      Expected:
-function
-      Actual:
-undefined
-
-    should return a volume function that calculates proper volumes 
-      Expected:
-
-      Actual:
-
-
-
-Declaration Notation exercises XX
-  Declaration 1 XX
-    should declare a function called testNinja 
-      Expected:
-
-      Actual:
-null
-
-    should log the correct string in testNinja 
-      Expected:
-
-      Actual:
-
-
-  Declaration 2 XXXX
-    should call trainNinja with the argument "punch" 
-      Expected:
-
-      Actual:
-null
-
-    should log the result of calling trainNinja 
-      Expected:
-
-      Actual:
-function () {
-        var callData = {
-          object: this,
-          args: Array.prototype.slice.apply(arguments)
-        };
-
-        callTracker.track(callData);
-        var returnValue = spyStrategy.exec.apply(this, arguments);
-        callData.returnValue = returnValue;
-
-        return returnValue;
-      }
-
-      Expected:
-1
-      Actual:
-0
-
-      Expected:
-Kick, punch, block! It's all in the mind!
-      Actual:
-
-
-    should declare a function called trainNinja that takes a parameter move 
-      Expected:
-
-      Actual:
-null
-
-    should call trainNinja above/before the function declaration 
-      Expected:
-
-      Actual:
-false
-
-
-The Call Stack exercises XX
-  Stack 1 X
-    should return two pancake flavors, concatenated 
-      Expected:
-chocolate chip snozzberries
-      Actual:
-undefined
-
-  Stack 2 XXXX
-    should return a stack of four pancakes 
-      Expected:
-apple,breadfruit,strawberry,durian
-      Actual:
-undefined
-
-    should log the number of pancakes in the stack 
-      Expected:
-2
-      Actual:
-function () {
-        var callData = {
-          object: this,
-          args: Array.prototype.slice.apply(arguments)
-        };
-
-        callTracker.track(callData);
-        var returnValue = spyStrategy.exec.apply(this, arguments);
-        callData.returnValue = returnValue;
-
-        return returnValue;
-      }
-
-    should log the flavor of the top pancake 
-      Expected:
-durian
-      Actual:
-function () {
-        var callData = {
-          object: this,
-          args: Array.prototype.slice.apply(arguments)
-        };
-
-        callTracker.track(callData);
-        var returnValue = spyStrategy.exec.apply(this, arguments);
-        callData.returnValue = returnValue;
-
-        return returnValue;
-      }
-
-    should log the order of the pancake in question 
-      Expected:
-3
-      Actual:
-function () {
-        var callData = {
-          object: this,
-          args: Array.prototype.slice.apply(arguments)
-        };
-
-        callTracker.track(callData);
-        var returnValue = spyStrategy.exec.apply(this, arguments);
-        callData.returnValue = returnValue;
-
-        return returnValue;
-      }
-
-
-Optional Arguments exercises XX
-  Optional 1 X
-    should return a function that has 4 parameters 
-      Expected:
-
-      Actual:
-
-
-  Optional 2 X
-    should call a given function with 4 arguments 
-      Expected:
-
-      Actual:
-
-
-
-Closure exercises XX
-  Closures 1 XX
-    should return a partially curried function that returns "THIS IS NO SPACE CUBE!" when given 4 and 2 and then 5 
-      Expected:
-
-      Actual:
-
-
-    should return a partially curried function that returns "SPACE CUBE DETECTED" when given 5 and 5 and then 5 
-      Expected:
-
-      Actual:
-
-
-  Closures 2 XX
-    should return a curried function that returns "THIS IS NO SPACE CUBE!" when given 4, 2, and then 5 
-      Expected:
-
-      Actual:
-
-
-    should return a curried function that returns "SPACE CUBE DETECTED!!" when given 5, 5, and then 5 
-      Expected:
-
-      Actual:
-
-
-
-Recursion exercises XX
-  Recursion 1 *XX
-    should have the call to controller written only once 
-      Expected:
-
-      Actual:
-
-
-    should call controller with each part of the code 
-      Expected:
-up,up,down,down,left,right,left,right,B,A,select,start
-      Actual:
-
-
-  Recursion 2 XX
-    should call click # times 
-      Expected:
-8
-      Actual:
-0
-
-    should call twist # times 
-      Expected:
-7
-      Actual:
-0
-
+Recursion exercises **
 
 Growing Functions exercises X
   Growing 1 X*
@@ -717,8 +490,40 @@ THIS IS NO SPACE CUBE!
 SPACE CUBE DETECTED!!
 THIS IS NO SPACE CUBE!
 Declaration 1:
+You gotta believe!
 Declaration 2:
+Kick, punch, block! It's all in the mind!
 STACK 1 & 2:
+2
+durian
+3
+Key Pressed: up
+Key Pressed: up
+Key Pressed: down
+Key Pressed: down
+Key Pressed: left
+Key Pressed: right
+Key Pressed: left
+Key Pressed: right
+Key Pressed: B
+Key Pressed: A
+Key Pressed: select
+Key Pressed: start
+The puzzlebox clicks.
+The puzzlebox clicks.
+The puzzlebox clicks.
+The puzzlebox clicks.
+The puzzlebox clicks.
+The puzzlebox clicks.
+The puzzlebox clicks.
+The puzzlebox is free to be twisted.
+The puzzlebox turns.
+The puzzlebox turns.
+The puzzlebox turns.
+The puzzlebox turns.
+The puzzlebox turns.
+The puzzlebox turns.
+"We have such sights to show you..."
 The pigs need 4sq. ft.
 The chickens need 16sq. ft.
 The sheep need 9sq. ft.
